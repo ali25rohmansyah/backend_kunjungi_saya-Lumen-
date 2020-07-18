@@ -20,10 +20,10 @@ class CreateUsersTable extends Migration
             $table->string('tanggal_lahir')->nullable();
             $table->string('alamat')->nullable();
             $table->string('no_hp')->nullable();
-            $table->enum('status_no_hp', ['1' , '2'])->nullable();
-            $table->enum('status_kepegawaian', ['aktif', 'pensiun'])->nullable();
+            $table->string('status_no_hp')->nullable();
+            $table->string('status_kepegawaian')->nullable();
             $table->integer('gaji')->nullable();
-            $table->enum('pembayaran_gaji', ['bni', 'mandiri', 'bri'])->nullable();
+            $table->string('pembayaran_gaji')->nullable();
             $table->string('sales_respon')->nullable();
             $table->timestamps();
         });
